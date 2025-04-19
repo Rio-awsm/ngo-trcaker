@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NGO Impact Tracker
 
-## Getting Started
+A full-stack web application that helps NGOs submit monthly impact reports and provides an admin dashboard for data visualization.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Frontend**: Next.js (App Router), Tailwind CSS, Lucide-React icons
+- **Backend**: Next.js API Routes
+- **Database**: PostgreSQL (NeonDB) with Prisma ORM
+- **Form Handling**: React Hook Form
+- **Styling**: Tailwind CSS for modern, responsive UI
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Setup Instructions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+- Node.js (v16 or higher)
+- PostgreSQL database url
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Rio-awsm/ngo-trcaker.git
+   cd ngo-tracker
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Set up environment variables:
+   Create a `.env` file in the root directory with:
+   ```
+   DATABASE_URL="postgresql://username:password/dbname"
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Initialize the database:
+   ```bash
+   npx prisma migrate dev --name init
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Initialize prisma client:
+   ```bash
+   npx prisma generate
+   ```
+
+6. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+
+## Deployment
+
+This application is deployed on Vercel. You can access it at [https://ngo-impact-tracker.vercel.app](https://ngo-impact-tracker.vercel.app)

@@ -8,7 +8,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <h1 className="text-xl font-bold text-blue-600">NGO Impact Tracker</h1>
+             <Link href="/"><h1 className="text-xl font-bold text-blue-600">NGO Impact Tracker</h1></Link> 
             </div>
             <div className="ml-10 flex items-center space-x-4">
               <Link href="/report" className="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600">
