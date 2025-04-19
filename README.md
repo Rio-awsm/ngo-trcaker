@@ -57,4 +57,4 @@ A full-stack web application that helps NGOs submit monthly impact reports and p
 
 ## Deployment
 
-This application is deployed on Vercel. You can access it at [https://ngo-impact-tracker.vercel.app](https://ngo-impact-tracker.vercel.app)
+This application is deployed on Vercel. You can access it at [https://ngo-trcaker.vercel.app/](https://ngo-trcaker.vercel.app/)
